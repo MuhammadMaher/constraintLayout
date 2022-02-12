@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_margin="@dimen/_10sdp">
+    <TextView
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_Sign_screen"
+        android:elevation="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:fontFamily="cursive" />
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/tv_Sign_screen"
+        android:id="@+id/register_activity_et_email"
+        android:hint="emil"
+        android:inputType="textWebEmailAddress"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColorHint="#AE0B0B0B"
+        android:textColor="#AE0E0E0E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/register_activity_et_email"
+        android:id="@+id/register_activity_et_password"
+        android:hint="password"
+        android:inputType="textVisiblePassword"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="20dp"
+        android:textColorHint="#AE090909"
+        android:textColor="#AE0B0A0A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintTop_toBottomOf="@id/register_activity_et_password"
+        android:id="@+id/textField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_round_account_circle_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:endIconMode="password_toggle"
+        app:errorEnabled="true"
+        android:hint="Label"
+        android:layout_margin="@dimen/_5sdp"
+        app:helperTextEnabled="true"
+        app:helperText="Required">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="@dimen/_10sdp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:layout_constraintTop_toTopOf="@id/material_card"
+        app:layout_constraintBottom_toTopOf="@id/material_card"
+        app:layout_constraintStart_toStartOf="@+id/material_card"
+        app:layout_constraintEnd_toEndOf="@id/material_card"
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:src="@drawable/mmmm1"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        android:elevation="@dimen/_10sdp"
+         />
+    <com.google.android.material.card.MaterialCardView
+
+        android:id="@+id/material_card"
+        android:layout_margin="@dimen/_30sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:background="#BCFFC107"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mohamed Maher"
+                android:paddingTop="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_25sdp"
+                android:textStyle="bold" />
+        <TextView
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mohamed@gmai.com"
+            android:textColorHint="#000"
+            android:textSize="@dimen/_20ssp"
+            />
+
+    </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <LinearLayout
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/linear_layout"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@id/material_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_weight="50"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/register_activity_et_register"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/register_activity_et_login"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:text="login"
+            app:icon="@drawable/ic_round_add_24"
+
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+        <Button
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_weight="50"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/register_activity_et_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/register_activity_et_register"
+            android:text="register"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+        android:onClick="Alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout"
+        android:src="@drawable/ic_round_add_24"
+        app:maxImageSize="@dimen/_15sdp"
+        android:backgroundTint="#FFC107"
+        app:fabCustomSize="@dimen/_40sdp"
+        android:layout_margin="@dimen/_5sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
